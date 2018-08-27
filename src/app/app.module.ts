@@ -31,6 +31,7 @@ import {PetsModule} from './pets/pets.module';
 import {VisitsModule} from './visits/visits.module';
 import {PetTypesModule} from './pettypes/pettypes.module';
 import {VetsModule} from './vets/vets.module';
+import {SchedulesModule} from './schedules/schedules.module';
 import {PartsModule} from './parts/parts.module';
 import {SpecialtiesModule} from './specialties/specialties.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -49,6 +50,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     VisitsModule,
     PetTypesModule,
     VetsModule,
+    SchedulesModule,
     SpecialtiesModule,
     PartsModule,
     BrowserAnimationsModule,

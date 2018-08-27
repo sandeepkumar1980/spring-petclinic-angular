@@ -1,0 +1,53 @@
+<div class="container-fluid">
+  <div class="container xd-container">
+    <h2>Add Appointment</h2>
+    <form id="vet" class="form-horizontal" (ngSubmit)="onSubmit(scheduleForm.value)" #scheduleForm="ngForm">
+      <div class="form-group" hidden="true">
+        <input type="text" hidden="true" class="form-control" id="id" [(ngModel)]="schedule.id" name="id"/>
+      </div>
+      <div class="control-group">
+        <div class="form-group ">
+          <label for="vets" class="col-sm-2 control-label">Select a Vet </label>
+          <div class="col-sm-10">
+            <select id="vet" name="vet" class="form-control" [(ngModel)]="selected_vet">
+              <option *ngFor="let vet of vets_list" [ngValue]="vet">
+               {{ vet.lastName }},{{ vet.firstName }}
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="form-group has-feedback"  >
+        <label for="description" class="col-sm-2 control-label">Description</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="description" [(ngModel)]="schedule.description" minlength="20" required name="description" #description="ngModel"/>
+        </div>
+      </div>
+
+      <div class="form-group" >
+        <label for="scheduledate" class="col-sm-2 control-label">Date</label>
+          <div class="col-sm-10">
+            <input type="date"   date='yyyy-mm-dd' class="form-control" id="date" [(ngModel)]="schedule.date"   name="date" #date="ngModel"/>
+        </div>
+      </div>
+      <div class="form-group has-feedback"  >
+        <label for="starttime" class="col-sm-2 control-label">Time</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="starttime" [(ngModel)]="schedule.starttime" minlength="20" required name="starttime" #starttime="ngModel"/>
+        </div>
+      </div>
+      <div class="form-group has-feedback"  >
+        <label for="status" class="col-sm-2 control-label">Status</label>
+        <div class="col-sm-10">
+              <input type="text" class="form-control" id="status" [(ngModel)]="schedule.status" minlength="20" required name="status" #status="ngModel"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <br/>
+          <button class="btn btn-default" type="submit">Confirm Appointment</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
